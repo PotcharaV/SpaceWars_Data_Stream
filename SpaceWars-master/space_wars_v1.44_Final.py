@@ -575,7 +575,7 @@ def callback_error(msg) :
     print("error", msg)
 
 client.on_connect = callback_connect # แสดงข้อความเมื่อเชื่อมต่อกับ netpie สำเร็จ
-client.on_message= callback_message # ให้ทำการแสดงข้อความที่ส่งมาให้
+client.on_message= callback_message # ให้ทำการแสดงข้อความที่ส่งมาให้ netpierecieve
 client.on_error = callback_error # หากมีข้อผิดพลาดให้แสดง
 client.subscribe("/abzab") # ชื่อช่องทางส่งข้อมูล ต้องมี / นำหน้า และต้องใช้ช่องทางเดียวกันจึงจะรับส่งข้อมูลระหว่างกันได้
 client.connect(False) # เชื่อมต่อ ถ้าใช้ True เป็นการค้างการเชื่อมต่อclient.on_message= callback_message # ให้ทำการแสดงข้อความที่ส่งมาให้
@@ -766,7 +766,7 @@ while not quit_game:
 			if event.type == pygame.QUIT:
 				quit_game = True	
 
-			if event.type == pygame.USEREVENT and not game_over : 
+			if event.type == pygame.USEREVENT and not game_over : #netpiesent
 
 				# A0) Position in X axis
 				# A1) Position in Y axis
