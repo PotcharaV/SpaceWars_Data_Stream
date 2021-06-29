@@ -464,15 +464,15 @@ def show_game_over(screen_sizeX, screen_sizeY, score, high_score):
 	message_display_center('GAME OVER', font_large, yellow, int(screen_sizeX/2), int(screen_sizeY * 4/20))
 
 	try:
-		message_display_center('Rank 1 Player ' + str(RANK_ONLINE_PLAYER[0]), font_medium, yellow, int(screen_sizeX/2), int(screen_sizeY *8/20))
+		message_display_center('Rank 1 ' + str(RANK_ONLINE_PLAYER[0]), font_medium, yellow, int(screen_sizeX/2), int(screen_sizeY *8/20))
 	except:
 		pass
 	try:
-		message_display_center('Rank 2 Player ' + str(RANK_ONLINE_PLAYER[1]), font_medium, yellow, int(screen_sizeX/2), int(screen_sizeY *9/20))
+		message_display_center('Rank 2 ' + str(RANK_ONLINE_PLAYER[1]), font_medium, yellow, int(screen_sizeX/2), int(screen_sizeY *9/20))
 	except:
 		pass
 	try:
-		message_display_center('Rank 3 Player ' + str(RANK_ONLINE_PLAYER[2]), font_medium, yellow, int(screen_sizeX/2), int(screen_sizeY *10/20))
+		message_display_center('Rank 3 ' + str(RANK_ONLINE_PLAYER[2]), font_medium, yellow, int(screen_sizeX/2), int(screen_sizeY *10/20))
 	except:
 		pass
 
@@ -483,7 +483,7 @@ def show_game_over(screen_sizeX, screen_sizeY, score, high_score):
 	message_display_center('Press any key to continue', font_medium, yellow, int(screen_sizeX/2), int(screen_sizeY *18/20))
 
 	global df
-	df.to_csv(data_fname,index=False)	
+	df.to_csv(data_fname,index=False)
 
 
 #############################
